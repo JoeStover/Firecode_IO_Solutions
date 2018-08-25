@@ -1,5 +1,5 @@
 package BinarySearchOfIntArray;
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * Binary Search on Array of Integers 
