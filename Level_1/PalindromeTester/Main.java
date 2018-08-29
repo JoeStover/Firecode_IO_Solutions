@@ -25,8 +25,30 @@ package PalindromeTester;
  */
 public class Main 
 {
+	// iterative solution
 	public static boolean isStringPalindrome(String str)
 	{
-		return true;
+		boolean isPali = true;
+		if(str != null && !str.isEmpty())
+		{
+			int first = 0;
+			int last = str.length() - 1;
+			while(first <= last && isPali)
+			{
+				isPali = str.charAt(first++) == str.charAt(last--);
+			}
+		}
+		return isPali;
+	}
+	
+	// recursive solution
+	public static boolean isPaliRecursive(String str)
+	{
+		if(str == null || str.length() < 2)
+		{
+			return true;
+		}
+		return (str.charAt(0) == str.charAt(str.length() - 1)) ? 
+				isPaliRecursive(str.substring(1, str.length() - 1)) : false;
 	}
 }
