@@ -1,4 +1,4 @@
-package PowerOfTwo;
+package InsertStars;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -8,31 +8,27 @@ public class MainTest
 	@Test
 	public void testOne() 
 	{
-		assertTrue(Main.isPowOfTwo(1));
+		assertEquals("ab*ba", Main.insertPairStar("abba"));
 	}
-	
+
 	@Test
 	public void testTwo() 
 	{
-		assertFalse(Main.isPowOfTwo(9));
+		assertEquals("b*b*b", Main.insertPairStar("bbb"));
 	}
-	
 	@Test
 	public void testThree() 
 	{
-		assertTrue(Main.isPowOfTwo(256));
+		assertEquals("ab*b*ba", Main.insertPairStar("abbba"));
 	}
-	
 	@Test
 	public void testFour() 
 	{
-		assertTrue(Main.isPowOfTwo(8));
+		assertEquals("b", Main.insertPairStar("b"));
 	}
-	
 	@Test
 	public void testFive() 
 	{
-		assertFalse(Main.isPowOfTwo(5));
+		assertNull(Main.insertPairStar(null));
 	}
-
 }

@@ -1,38 +1,38 @@
-package PowerOfTwo;
+package IsIntegerPalindrome;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MainTest 
 {
+
 	@Test
 	public void testOne() 
 	{
-		assertTrue(Main.isPowOfTwo(1));
+		assertFalse(Main.isIntPalindrome(-1));
 	}
-	
+
 	@Test
 	public void testTwo() 
 	{
-		assertFalse(Main.isPowOfTwo(9));
+		assertTrue(Main.isIntPalindrome(0));
 	}
 	
 	@Test
 	public void testThree() 
 	{
-		assertTrue(Main.isPowOfTwo(256));
+		assertTrue(Main.isIntPalindrome(1221));
 	}
 	
 	@Test
 	public void testFour() 
 	{
-		assertTrue(Main.isPowOfTwo(8));
+		assertTrue(Main.isIntPalindrome(12321));
 	}
 	
 	@Test
 	public void testFive() 
 	{
-		assertFalse(Main.isPowOfTwo(5));
+		assertFalse(Main.isIntPalindrome(123));
 	}
-
 }
