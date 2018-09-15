@@ -16,18 +16,24 @@ public class ListNode
 		this.data = data;
 	}
 	
+	
 	public static String printList(ListNode head)
 	{
 		String result = "";
 		ListNode temp = head;
-		while(temp != null)
+		if(temp != null)
 		{
-			result += temp.data;
-			if(temp.next != null)
+			// do/while covers a circular linked list
+			do
 			{
-				result += "->";
+				result += temp.data;
+				if(temp.next != null)
+				{
+					result += "->";
+				}
+				temp = temp.next;
 			}
-			temp = temp.next;
+			while(temp != null && temp != head);
 		}
 		return result;
 	}
