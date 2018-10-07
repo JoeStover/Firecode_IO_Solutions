@@ -19,9 +19,9 @@ public class MainTest
 	}
 	
 	@Test
-	public void test() 
+	public void testOne() 
 	{
-		fail("Not yet implemented");
+		fail("you failed");
 	}
 
 }
